@@ -23,15 +23,23 @@ void setup() {
   Wire.setClock(400000);
   delay(5);
 
-  // put your setup code here, to run once:
-  pinMode(interruptPin, INPUT);  // Set interruptPin as INPUT with internal Pull-Up Resistors
-  attachInterrupt(digitalPinToInterrupt(interruptPin), readEncoders, CHANGE); // Create Interrupt on interrupt pin with ISR on CHANGE
+  // Set interruptPin as INPUT with internal Pull-Up Resistors
+  pinMode(interruptPin, INPUT);  
+
+  // Create Interrupt on interrupt pin with ISR on CHANGE
+  attachInterrupt(digitalPinToInterrupt(interruptPin), readEncoders, CHANGE); 
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  // Serial print when an ecoder has been pressed
+  for (int i=0; i<5; i++){
+    if (Encoder[i].pressed){
+      Serial.print("Encoder ");
+      Serial.print(i);
+      Serial.print(" has been pressed.");
+    }
+  }
 }
 
 // ISR Routine for Rotary Encoders
