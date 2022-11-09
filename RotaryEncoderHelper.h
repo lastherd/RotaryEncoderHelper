@@ -1,5 +1,5 @@
-#ifndef ROTARYENCODER_H
-#define ROTARYENCODER_H
+#ifndef ROTARYENCODERHELPER_H
+#define ROTARYENCODERHELPER_H
 #include "TCA9555.h"
 
 class RotaryEncoder {

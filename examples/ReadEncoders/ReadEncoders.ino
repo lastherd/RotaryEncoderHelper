@@ -1,7 +1,7 @@
 // Example for handling 5 Rotary encoders over 2 TCA9555 bus expanders with one common interrupt
 // Encoders can be splittet over two chips, function overloading is used to read also less than all pins all together
 
-#include "RotaryEncoder.h"
+#include "RotaryEncoderHelper.h"
 
 // define interrupt pin of i2c bus expanders (TCA9555)
 #define interruptPin 10

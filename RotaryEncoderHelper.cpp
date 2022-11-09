@@ -1,4 +1,4 @@
-#include "RotaryEncoder.h"
+#include "RotaryEncoderHelper.h"
 
 // Read Rotary Encoder Chip with clckPin, dataPin, swPin
 void RotaryEncoder::read(TCA9555 &chip, byte _clckPin, byte _dataPin, byte _swPin){
